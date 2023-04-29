@@ -3,8 +3,8 @@
 # beta-wiki
 A wiki documenting Minecraft Beta 1.7.3's technical specification and network protocol.
 
-### Table of Contents
-#### Packets
+## Table of Contents
+### Packets
 1. `0x01` [Keep Alive](packets/000-keep-alive.md)
 2. `0x02` [Login](packets/001-login.md)
 3. `0x03` [Handshake](packets/002-handshake.md)
