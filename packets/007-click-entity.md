@@ -1,7 +1,7 @@
 # Click Entity
 | Packet ID | Direction |
 | --- | --- |
-| `0x07` | Clientbound |
+| `0x07` | Serverbound |
 
 This is sent after the player has finished logging in to spawn them into the world. It can also be sent at any time to update where the player's compass points at.
 

@@ -1,7 +1,7 @@
 # Player On Ground
 | Packet ID | Direction |
 | --- | --- |
-| `0x0A` | Clientbound |
+| `0x0A` | Serverbound |
 
 This packet is sent to the server to determine if the player is on the ground or airborne.
 
