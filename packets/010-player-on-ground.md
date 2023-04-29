@@ -5,7 +5,7 @@
 
 This packet is sent to the server to determine if the player is on the ground or airborne.
 
-> **Warning:** This value is unreliable for fall damage and cheat detection as it can be spoofed by the client.
+> **Warning**: This value is unreliable for fall damage and cheat detection as it can be spoofed by the client.
 
 ## Serverbound
 | Field | Type | Description |
