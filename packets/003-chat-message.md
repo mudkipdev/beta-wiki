@@ -16,5 +16,5 @@ The client will send this packet when the "enter" key is pressed after typing a 
 
 | Field | Value | 
 | --- | --- |
-| Message | "<Notch> Hello world!" |
+| Message | "\<Notch\> Hello world!" |
 </details>
