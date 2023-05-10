@@ -3,7 +3,7 @@
 | --- | --- |
 | `0x09` | Both |
 
-This is sent by the client when they press the "respawn" button after dying. The server must teleport the user to the spawn point and return a respawn packet in response.
+This is sent by the client when they press the "respawn" button after dying or when changing dimensions. The server must teleport the user to the spawn point and return a respawn packet in response.
 
 | Field | Type | Description |
 | --- | --- | --- |
