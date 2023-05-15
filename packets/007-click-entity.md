@@ -3,7 +3,7 @@
 | --- | --- |
 | `0x07` | Serverbound |
 
-This is sent after the player has finished logging in to spawn them into the world. It can also be sent at any time to update where the player's compass points at.
+This is sent by the player when an entity is left/right-clicked. The server should only accept this packet if the entity is not obstructed and is within 4 blocks of the player.
 
 ## Clientbound
 | Field | Type | Description |
