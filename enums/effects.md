@@ -14,4 +14,4 @@ These are the sound/particle effects present in the vanilla client.
 **Additional Data**
 Some of these effects also have additional metadata available as an integer in the ["Effect" packet](packets/061-effect.md).
 - `MUSIC_DISC` - `0` to stop playing music, `2000` for 13 and `2001` for "Cat".
-- `SMOKE` - 
+- `SMOKE` - TODO: This supposedly denotes the direction of the smoke.
