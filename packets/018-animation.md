@@ -1,0 +1,21 @@
+# Animation
+| Packet ID | Direction |
+| --- | --- |
+| `0x12` | Both |
+
+This packet is sent by both the client and the server for swinging your arm (`1`) and leaving a bed (`3`), which is serverbound only. The client instead uses the [Entity Action](packets/019-entity-action.md) packet for when it leaves a bed.
+
+## Clientbound
+| Field | Type | Description |
+| --- | --- | --- |
+| Player ID | Integer | The ID of the player who did the animation. |
+| Animation | Integer | The type of animation. Can be `1` or `3`. |
+
+<details>
+    <summary>Example Packet</summary>
+
+| Field | Value | 
+| --- | --- |
+| Player ID | 1298 |
+| Animation | 1 |
+</details>
