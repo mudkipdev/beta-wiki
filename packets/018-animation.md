@@ -3,7 +3,7 @@
 | --- | --- |
 | `0x12` | Both |
 
-This packet is sent by both the client and the server for swinging your arm (`1`) and leaving a bed (`3`), which is serverbound only. The client instead uses the [Entity Action](packets/019-entity-action.md) packet for when it leaves a bed.
+This packet is sent by both the client and the server for swinging your arm (`1`) and leaving a bed (`3`), which is serverbound only. The client instead uses the [Entity Action](019-entity-action.md) packet for when it leaves a bed.
 
 ## Clientbound
 | Field | Type | Description |
