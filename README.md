@@ -55,7 +55,7 @@ A wiki documenting Minecraft Beta 1.7.3's technical specification and network pr
 48. `0x66` [Click Inventory Slot](packets/102-click-inventory-slot.md)
 49. `0x67` [Set Inventory Slot](packets/103-set-inventory-slot.md)
 50. `0x68` [Window Items](packets/104-window-items.md)
-51. `0x69` [Furnace Progress](packets/105-furnace-progress.md)
+51. `0x69` [Furnace](packets/105-furnace.md)
 52. `0x6A` [Inventory Transaction](packets/106-inventory-transaction.md)
 53. `0x82` [Sign](packets/130-sign.md)
 54. `0x83` [Map](packets/131-map.md)
