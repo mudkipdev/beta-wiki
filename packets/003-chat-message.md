@@ -7,9 +7,10 @@ The client will send this packet when the "enter" key is pressed after typing a 
 
 > **Warning**: A client sending the vanilla server a chat message longer than 119 characters might cause the client to be kicked.
 
+## Both
 | Field | Type | Description |
 | --- | --- | --- |
-| Message | String16 | |
+| Message | String16 | The message being sent. |
 
 <details>
     <summary>Example Packet</summary>

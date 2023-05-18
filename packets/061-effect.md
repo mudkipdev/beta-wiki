@@ -5,6 +5,7 @@
 
 This is sent by the server when it expects a client to play a sound effect or spawn a particle.
 
+## Clientbound
 | Field | Type | Description |
 | --- | --- | --- |
 | Effect ID | Integer | The ID of the effect to play. See [Effects](enums/effects.md) |
