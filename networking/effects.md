@@ -12,6 +12,6 @@ These are the sound/particle effects present in the vanilla client.
 | 2001 | BLOCK_BREAK | Sound |
 
 **Additional Data**
-Some of these effects also have additional metadata available as an integer in the ["Effect" packet](packets/061-effect.md).
+Some of these effects also have additional metadata available as an integer in the ["Effect" packet](networking/packets/061-effect.md).
 - `MUSIC_DISC` - `0` to stop playing music, `2256` for 13 and `2257` for "Cat".
 - `SMOKE` - TODO: This supposedly denotes the direction of the smoke.
