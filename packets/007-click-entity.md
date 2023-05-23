@@ -19,5 +19,5 @@ This is sent by the player when an entity is left/right-clicked. The server shou
 | --- | --- |
 | Player ID | 1298 |
 | Entity ID | 1805 |
-| Left-Click? | 1 |
+| Left-Click? | true |
 </details>
