@@ -2,6 +2,7 @@
 These are the sound/particle effects present in the vanilla client.
 
 | ID | Name | Type |
+| --- | --- | --- |
 | 1000 | CLICK | Sound |
 | 1001 | CLICK2 | Sound |
 | 1002 | BOW | Sound |
