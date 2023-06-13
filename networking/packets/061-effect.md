@@ -19,5 +19,9 @@ This is sent by the server when it expects a client to play a sound effect or sp
 
 | Field | Value | 
 | --- | --- |
-| Time | 102000 |
+| Effect ID | 1005 |
+| X | 105 |
+| Y | 72 |
+| Z | 649 |
+| Data | 2257 |
 </details>
