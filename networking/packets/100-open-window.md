@@ -28,5 +28,6 @@ This packet is sent by the server when an inventory window is opened. The type o
 | --- | --- |
 | Window ID | 49 |
 | Type | 0 |
-| Title | 
+| Title | "Chest" |
+| Size | 27 |
 </details>
