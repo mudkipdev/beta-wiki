@@ -3,7 +3,7 @@
 | --- | --- |
 | `0x07` | Serverbound |
 
-This is sent by the player when an entity is left/right-clicked. The server should only accept this packet if the entity is not obstructed and is within 4 blocks of the player.
+This is sent by the player when an entity is left/right-clicked. The server should only accept this packet if the entity is not obstructed and is within 3 blocks of the player.
 
 ## Clientbound
 | Field | Type | Description |
