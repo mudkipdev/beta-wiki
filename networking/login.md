@@ -17,7 +17,6 @@ The bare minimum to join a Server with a Notchian Client is:
 - `S->C` Handshake
 - `C->S` Login
 - `S->C` Login
-- `S->C` Player Position And Look
+- `S->C` Player Position and Look
 
-A Notchian Client becomes responsive upon receiving the Players initial starting Position and Look Direction from the Server.
-After this point, the Client will continiously send Position and Look Data. So long as the Server at least acknowledges future packets, the Client will continue to run without issues.
+A vanilla client will become responsive upon receiving the player's initial starting position and rotation from the server. After this, the client will continuously send Position and Look packets.
