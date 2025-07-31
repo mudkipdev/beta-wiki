@@ -1,6 +1,7 @@
 ---
 title: Data Types
 layout: home
+nav_order: 2
 parent: Networking
 ---
 

@@ -4,3 +4,5 @@ theme: just-the-docs
 baseurl: ""
 
 url: https://OfficialPixelBrush.github.io/beta-wiki
+just_the_docs:
+  color_scheme: dark

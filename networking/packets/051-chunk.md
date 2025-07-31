@@ -21,15 +21,15 @@ For more info, check out the specs of [zlib](https://www.rfc-editor.org/rfc/rfc1
 
 ## Clientbound
 
-| Field           | Type     | Description                                      |
-| --------------- | -------- | ------------------------------------------------ |
-| x               | Integer  | The x-coordinate from which the area starts     |
-| y               | Short    | The y-coordinate from which the area starts     |
-| z               | Integer  | The z-coordinate from which the area starts     |
-| width           | Byte     | The width of the updated area, `-1`             |
-| height          | Byte     | The height of the updated area, `-1`            |
-| length          | Byte     | The length of the updated area, `-1`            |
-| compressed size | Integer  | The size, in bytes, of the zlib compressed data |
+| Field           | Type       | Description                                     |
+| --------------- | ---------- | ----------------------------------------------- |
+| X               | Integer    | The X position of the chunk                     |
+| Y               | Short      | The Y position of the chunk                     |
+| Z               | Integer    | The Z position of the chunk                     |
+| width           | Byte       | The width of the updated area, `-1`             |
+| height          | Byte       | The height of the updated area, `-1`            |
+| length          | Byte       | The length of the updated area, `-1`            |
+| compressed size | Integer    | The size, in bytes, of the zlib compressed data |
 | compressed data | Byte Array | The zlib compressed data                        |
 
 ## Example Packet
