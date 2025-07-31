@@ -1,5 +1,5 @@
 ---
-title: "0x0C: Player Position and Look"
+title: "0x0D: Player Position and Look"
 nav_order: 14
 layout: home
 parent: Packets
@@ -8,7 +8,7 @@ parent: Packets
 
 | Packet ID | Direction |
 | --------- | --------- |
-| `0x0C`    | Both      |
+| `0x0D`    | Both      |
 
 
 ## Clientbound
