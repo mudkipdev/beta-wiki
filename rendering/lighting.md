@@ -5,8 +5,12 @@ parent: Rendering
 ---
 
 # Lighting
+{: .no_toc }
 Every block has constant directional lighting, which is statically assigned based on
 the angles of the faces. This is applied on top of any lighting calculated here after the fact.
+
+1. TOC
+{:toc}
 
 ## Light levels
 Lighting in Minecraft is based on a 4-Bit gradient from `0` - `15`. As of Indev, this relationship is no longer linear.
@@ -33,5 +37,5 @@ Every vertex samples and averages the light level of surrounding blocks along th
 
 ![](smoothlighting.png)
 
-### Credits
+**Credits**
 - [Vector image of incandescent light bulb pictogram (Public Domain)](https://publicdomainvectors.org/en/free-clipart/Vector-image-of-incandescent-light-bulb-pictogram/23310.html)
