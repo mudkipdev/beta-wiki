@@ -2,13 +2,26 @@
 title: Beta Wiki
 layout: home
 nav_order: 1
+last_modified_date: 31-07-2025_22:14_UTC+2
 ---
 # Beta Wiki
 A wiki documenting Minecraft Beta 1.7.3's technical specification and network protocol.
 ![](../banner.jpg)
 
+{: .note-title }
+> NOTICE
+>
+> This wiki is still a heavy wip. If you'd like something more complete,
+> please check out the [links on the resources page](resources)
+
 ## Objective
 To consolidate all knowledge on Minecrafts Legacy Protocols, specifically the way they were by Beta 1.7.3. This includes documenting both client and server behavior and communications, all while explaining it in such a way that anyone can make their own client or server with relative ease.
+
+## Contributing
+[Anyone can contribute to the Wiki](CONTRIBUTING)! Either through digging through decompiled code or just trial and error. Anything goes to make this the most objective source of truth for Minecraft Beta!
+
+## TODO
+Please check the [TODO Page](todo) to see what still needs to be done, or just click through the Wiki until you find something that's missing. Either open an issue on GitHub or try to solve it yourself!
 
 ## Maintainers
 <a href="https://github.com/OfficialPixelBrush/beta-wiki/graphs/contributors">

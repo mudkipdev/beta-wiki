@@ -4,6 +4,34 @@ theme: just-the-docs
 baseurl: ""
 
 url: https://OfficialPixelBrush.github.io/beta-wiki
+# favicon_ico: "/assets/images/favicon.ico"
 
-just_the_docs:
-  color_scheme: dark
+color_scheme: dark
+color_scheme_toggle: true
+sass:
+  style: compressed
+
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+gh_edit_link: true
+gh_edit_link_text: "✏️ Edit this page on GitHub."
+gh_edit_branch: "main"
+gh_edit_repository: "https://github.com/OfficialPixelBrush/beta-wiki"
+gh_edit_view_mode: "edit"
+
+enable_copy_code_button: true
+
+callouts:
+  # Use for warnings or erroneous info
+  warning:
+    title: Warning
+    color: red
+  # Use for notes or notices
+  note:
+    title: note
+    color: yellow
+  # Use for missing info
+  missing:
+    title: missing
+    color: grey
