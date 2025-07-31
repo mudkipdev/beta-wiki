@@ -34,4 +34,12 @@ callouts:
   # Use for missing info
   missing:
     title: missing
-    color: grey
+    color: blue
+  # Use for newly uncovered info
+  new:
+    title: missing
+    color: green
+  # Use for unconfirmed info
+  theory:
+    title: theory
+    color: purple
