@@ -1,0 +1,9 @@
+title: Beta Wiki
+description: A wiki documenting Minecraft Beta 1.7.3's technical specification and network protocol.
+theme: just-the-docs
+baseurl: ""
+
+url: https://OfficialPixelBrush.github.io/beta-wiki
+
+aux_links:
+  Template Repository: https://github.com/just-the-docs/just-the-docs-template

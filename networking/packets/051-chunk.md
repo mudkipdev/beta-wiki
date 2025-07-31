@@ -1,7 +1,15 @@
+---
+title: "0x33: Chunk"
+nav_order: 52
+layout: home
+parent: Packets
+---
+
 # Chunk
-| Packet ID | Direction |
-| --- | --- |
-| `0x33` | Clientbound |
+
+| Packet ID | Direction   |
+| --------- | ----------- |
+| `0x33`    | Clientbound |
 
 The packets is sent from the server to the client to update the blocks in the specified area.
 The origin coordinate (x,y,z) doesn't need to be chunk aligned.
@@ -12,6 +20,7 @@ Minecraft seems to use the standard zlib implementation Java provides, meaning t
 For more info, check out the specs of [zlib](https://www.rfc-editor.org/rfc/rfc1950) and [deflate](https://www.rfc-editor.org/rfc/rfc1951).
 
 ## Clientbound
+
 | Field           | Type     | Description                                      |
 | --------------- | -------- | ------------------------------------------------ |
 | x               | Integer  | The x-coordinate from which the area starts.     |

@@ -1,3 +1,9 @@
+---
+title: Data Types
+layout: home
+parent: Networking
+---
+
 # Data Types
 Thanks to [wiki.vg](https://wiki.vg/index.php?title=Protocol&oldid=510) for the data types.
 
@@ -10,6 +16,6 @@ Thanks to [wiki.vg](https://wiki.vg/index.php?title=Protocol&oldid=510) for the 
 | Long | 8 | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | Signed, two's complement. |
 | Float | 4 | | Single-precision 32-bit IEEE 754 floating point. |
 | Double | 8 | | Double-precision 64-bit IEEE 754 floating point. |
-| String8 | >=2 | | Modified UTF-8 string. Prefixed by a short containing the length of the string. |
-| String16 | >=2 and <= 240 | | UCS-2 string, big-endian. Prefixed by a short containing the length of the string in characters. UCS-2 consists of 16-bit words, each of which represent a Unicode code point between U+0000 and U+FFFF inclusive. |
+| String8 | >=2 | | Modified UTF-8 string. Prefixed by an unsigned short containing the length of the string. |
+| String16 | >=2 and <= 240 | | UCS-2 string, big-endian. Prefixed by an unsigned short containing the length of the string in characters. UCS-2 consists of 16-bit words, each of which represent a Unicode code point between U+0000 and U+FFFF inclusive. |
 | Entity Metadata | TODO | TODO | TODO |

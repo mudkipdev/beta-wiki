@@ -1,3 +1,9 @@
+---
+title: Login
+layout: home
+parent: Networking
+---
+
 # Login
 The general order of packets used to log in is usually:
 - `C->S` Handshake

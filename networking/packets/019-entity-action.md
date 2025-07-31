@@ -1,21 +1,31 @@
-# Entity Action
-| Packet ID | Direction |
-| --- | --- |
-| `0x12` | Serverbound |
+---
+title: "0x13: Entity Action"
+nav_order: 20
+layout: home
+parent: Packets
+---
 
-This packet is sent by the client for sneaking and leaving a bed. `1` is sent to start sneaking, `2` is sent to stop sneaking, and `3` is sent to leave a bed.
+# Entity Action
+
+| Packet ID | Direction   |
+| --------- | ----------- |
+| `0x13`    | Serverbound |
+
+This packet is sent by the client for performing certain actions, defined via a Bitmask.
+- Bit 0 is for Crouching
+- Bit 1 is for if the Entity is on fire
+- Bit 2 is for if the Entity is sitting
 
 ## Serverbound
-| Field | Type | Description |
-| --- | --- | --- |
-| Player ID | Integer | The ID of the player who did the animation. |
-| Action | Integer | The type of action. Can be `1`, `2`, or `3`. |
 
-<details>
-    <summary>Example Packet</summary>
+| Field     | Type    | Description                                  |
+| --------- | ------- | -------------------------------------------- |
+| Entity ID | Integer | The ID of the entity that did the animation. |
+| Action    | Integer | The type of action. |
 
-| Field | Value | 
-| --- | --- |
-| Player ID | 1298 |
-| Action | 1 |
-</details>
+## Example Packet
+
+| Field     | Value | 
+| --------- | ----- |
+| Entity ID | 1298  |
+| Action    | 1     |

@@ -1,0 +1,201 @@
+{
+  "main": {
+    "id": "f0e6f7f7ec91cf59",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b7adb4c34a07f2f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fdad498636014cf0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "17a7512e4291c636",
+    "type": "split",
+    "children": [
+      {
+        "id": "79f07128b11f7df3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6efe475376eb8dc9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "fb359e30d18f723c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d992b47cfeb935bb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "54f1ef9117fe4f5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "0561a826af6ce133",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddf29df4621b5a40",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "930b6a65cdd2e207",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5d91fb017789ecb4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cd3768ddd9424097",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fdad498636014cf0",
+  "lastOpenFiles": [
+    "networking/packets/255-disconnect.md",
+    "networking/packets/200-statistic.md",
+    "networking/packets/131-item-data.md",
+    "networking/packets/130-sign.md",
+    "networking/packets/106-inventory-transaction.md",
+    "networking/packets/105-furnace.md",
+    "networking/packets/104-window-items.md",
+    "networking/packets/103-set-inventory-slot.md",
+    "networking/packets/101-close-window.md",
+    "networking/packets/102-click-inventory-slot.md",
+    "networking/packets/100-open-window.md",
+    "networking/packets/071-lightning-bolt.md",
+    "networking/packets/070-game-state.md",
+    "networking/packets/061-effect.md",
+    "networking/packets/060-explosion.md",
+    "networking/packets/054-block-action.md",
+    "networking/packets/053-set-block.md",
+    "networking/packets/052-set-multiple-blocks.md",
+    "networking/packets/051-chunk.md",
+    "networking/packets/050-pre-chunk.md",
+    "networking/packets/040-entity-metadata.md",
+    "networking/packets/039-mount-entity.md",
+    "networking/packets/038-entity-status.md",
+    "networking/packets/032-entity-look.md",
+    "networking/packets/034-entity-position-look.md",
+    "networking/packets/033-entity-relative-position-look.md",
+    "networking/packets",
+    "networking",
+    "docs/networking/packets",
+    "docs/networking",
+    "docs",
+    "Gemfile.lock",
+    "Gemfile",
+    "Gemfile.txt"
+  ]
+}
