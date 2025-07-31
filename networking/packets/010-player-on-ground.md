@@ -19,7 +19,7 @@ This packet is sent to the server to determine if the player is on the ground or
 
 | Field     | Type | Description                                        |
 | --------- | ---- | -------------------------------------------------- |
-| On Ground | Byte | `0` for walking/swimming, `1` for jumping/falling |
+| On Ground | Boolean | `0` for walking/swimming, `1` for jumping/falling |
 
 ## Example Packet
 

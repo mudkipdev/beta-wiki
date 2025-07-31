@@ -30,7 +30,7 @@ Sent to the server when the player is moving, but hasn't changed their viewing d
 | Y         | Double | The Y position of the player                      |
 | Stance    | Double | The stance of the player                          |
 | Z         | Double | The Z position of the player                      |
-| On Ground | Byte   | `0` for walking/swimming, `1` for jumping/falling |
+| On Ground | Boolean | `0` for walking/swimming, `1` for jumping/falling |
 
 
 ## Example Packets
