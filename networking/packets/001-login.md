@@ -15,12 +15,12 @@ This packet is sent after [Handshake](002-handshake.md) to finish logging in. Th
 
 ## Clientbound
 
-| Field      | Type     | Description                             |
-| ---------- | -------- | --------------------------------------- |
-| Entity ID  | Integer  | The entity ID of the player.            |
-| Unused     | String16 | This value is not sent by the server.   |
-| World Seed | Long     | The random seed for terrain generation. |
-| Dimension  | Byte     | The player's spawning dimension.        |
+| Field      | Type     | Description                            |
+| ---------- | -------- | -------------------------------------- |
+| Entity ID  | Integer  | The entity ID of the player            |
+| Unused     | String16 | This value is not sent by the server   |
+| World Seed | Long     | The random seed for terrain generation |
+| Dimension  | Byte     | The player's spawning dimension        |
 
 The player's dimension is specified as `0` for The Overworld and `-1` for The Nether.
 
@@ -28,10 +28,10 @@ The player's dimension is specified as `0` for The Overworld and `-1` for The Ne
 
 | Field            | Type     | Description                           |
 | ---------------- | -------- | ------------------------------------- |
-| Protocol Version | Integer  | The current protocol version is `14`. |
-| Username         | String16 | The name of the connecting user.      |
-| Unused           | Long     | This value is not sent by the client. |
-| Unused           | Byte     | This value is not sent by the client. |
+| Protocol Version | Integer  | The current protocol version is `14` |
+| Username         | String16 | The name of the connecting user      |
+| Unused           | Long     | This value is not sent by the client |
+| Unused           | Byte     | This value is not sent by the client |
 
 ## Example Packets
 

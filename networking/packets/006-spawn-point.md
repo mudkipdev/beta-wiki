@@ -17,9 +17,9 @@ This is sent after the player has finished logging in to spawn them into the wor
 
 | Field | Type    | Description                        |
 | ----- | ------- | ---------------------------------- |
-| X     | Integer | The X position of the spawn point. |
-| Y     | Integer | The Y position of the spawn point. |
-| Z     | Integer | The Z position of the spawn point. |
+| X     | Integer | The X position of the spawn point |
+| Y     | Integer | The Y position of the spawn point |
+| Z     | Integer | The Z position of the spawn point |
 
 ## Example Packet
 

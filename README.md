@@ -1,4 +1,4 @@
-# beta-wiki
+# Beta Wiki
 A wiki documenting Minecraft Beta 1.7.3's technical specification and network protocol.
 ![](banner.jpg)
 

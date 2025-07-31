@@ -19,7 +19,7 @@ The client will send this packet when the "enter" key is pressed after typing a 
 
 | Field   | Type     | Description             |
 | ------- | -------- | ----------------------- |
-| Message | String16 | The message being sent. |
+| Message | String16 | The message being sent |
 
 
 ## Example Packet

@@ -17,9 +17,9 @@ This is sent by the server to update the progress of fuel burning or progress of
 
 | Field     | Type  | Description                                                            |
 | --------- | ----- | ---------------------------------------------------------------------- |
-| Window ID | Byte  | The incremental ID of the window. Ranges from 0 to 99.                 |
-| Bar       | Short | `0` for the smelting bar, `1` for the fuel bar, `2` for max burn time. |
-| Value     | Short | The progress of the bar.                                               |
+| Window ID | Byte  | The incremental ID of the window. Ranges from 0 to 99                 |
+| Bar       | Short | `0` for the smelting bar, `1` for the fuel bar, `2` for max burn time |
+| Value     | Short | The progress of the bar                                               |
 
 ## Example Packet
 

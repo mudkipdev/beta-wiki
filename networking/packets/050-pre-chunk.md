@@ -15,11 +15,11 @@ This is sent by the server to load or unload a chunk. When sending this packet a
 
 ## Clientbound
 
-| Field | Type    | Description                                         |
-| ----- | ------- | --------------------------------------------------- |
-| X     | Integer | The X position of **the chunk**.                    |
-| Z     | Integer | The Z position of **the chunk**.                    |
-| Load? | Boolean | Whether the client should load or unload the chunk. |
+| Field | Type    | Description |
+| ----- | ------- | --------------------------------------------- |
+| X     | Integer | The X position of the chunk |
+| Z     | Integer | The Z position of the chunk |
+| Load? | Boolean | Whether the client should load or unload the chunk |
 
 ## Example Packet
 

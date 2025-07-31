@@ -17,10 +17,10 @@ This packet is sent by the server when an inventory window is opened. The type o
 
 | Field     | Type    | Description                                                                    |
 | --------- | ------- | ------------------------------------------------------------------------------ |
-| Window ID | Byte    | The incremental ID of the window. Ranges from 0 to 99.                         |
-| Type      | Byte    | The type of the inventory. See above.                                          |
-| Title     | String8 | The name of the window.                                                        |
-| Size      | Byte    | The amount of inventory slots. Must be a multiple of 9 for a chest, see below. |
+| Window ID | Byte    | The incremental ID of the window. Ranges from 0 to 99                         |
+| Type      | Byte    | The type of the inventory. See above                                          |
+| Title     | String8 | The name of the window                                                        |
+| Size      | Byte    | The amount of inventory slots. Must be a multiple of 9 for a chest, see below |
 
 | Block          | Inventory Size |
 | -------------- | -------------- |

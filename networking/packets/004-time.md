@@ -17,7 +17,7 @@ Minecraft's time is measured in ticks, where there should be 20 ticks per second
 
 | Field | Type | Description                              |
 | ----- | ---- | ---------------------------------------- |
-| Time  | Long | The total accumulated time of the world. |
+| Time  | Long | The total accumulated time of the world |
 
 
 ## Example Packet

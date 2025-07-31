@@ -4,6 +4,3 @@ theme: just-the-docs
 baseurl: ""
 
 url: https://OfficialPixelBrush.github.io/beta-wiki
-
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template

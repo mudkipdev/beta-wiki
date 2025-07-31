@@ -17,7 +17,7 @@ This packet is used by the server to disconnect the client with a reason, after 
 
 | Field  | Type     | Description                              |
 | ------ | -------- | ---------------------------------------- |
-| Reason | String16 | The reason for disconnecting the client. |
+| Reason | String16 | The reason for disconnecting the client |
 
 
 ## Example Packet

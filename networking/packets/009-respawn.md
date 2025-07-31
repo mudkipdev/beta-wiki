@@ -17,7 +17,7 @@ This is sent by the client when they press the "respawn" button after dying or w
 
 | Field | Type | Description                                    |
 | ----- | ---- | ---------------------------------------------- |
-| World | Byte | `0` for The Overworld and `-1` for The Nether. |
+| World | Byte | `0` for The Overworld and `-1` for The Nether |
 
 ## Example Packet
 

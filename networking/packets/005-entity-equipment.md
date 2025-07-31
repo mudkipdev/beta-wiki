@@ -17,10 +17,10 @@ After an entity has been spawned, this packet may be sent to change the armor an
 
 | Field          | Type    | Description                              |
 | -------------- | ------- | ---------------------------------------- |
-| Entity ID      | Integer | The ID of the player/entity.             |
-| Inventory Slot | Short   | `0` for held item, `1` to `4` for armor. |
-| Item ID        | Short   | `-1` to reset the slot to be empty.      |
-| Item Metadata  | Short   | The damage value of the item.            |
+| Entity ID      | Integer | The ID of the player/entity             |
+| Inventory Slot | Short   | `0` for held item, `1` to `4` for armor |
+| Item ID        | Short   | `-1` to reset the slot to be empty      |
+| Item Metadata  | Short   | The damage value of the item            |
 
 
 ## Example Packet
