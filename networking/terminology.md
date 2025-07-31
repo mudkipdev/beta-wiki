@@ -10,8 +10,8 @@ This page will explain terminology used throughout this entire section of the wi
 
 | Term | Meaning |
 | :--- | :--- |
-| Clientbound | Sent from the Server to the Client |
-| Serverbound | Sent from the Client to the Server |
+| (`S->C`) Clientbound | Sent from the Server to the Client |
+| (`C->S`) Serverbound | Sent from the Client to the Server |
 | Server | The piece of software that is responsible for communicating with and handling clients. Its job is to ensure serverbound data is legal and to simulate the world around the connected players |
 | Client | The piece of software run by the user that is responsible for communicating with the server, handling packets, displaying the world to the user and forwarding user input to the server |
 | Player | The entity that acts on the inputs of the user |

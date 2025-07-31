@@ -6,9 +6,8 @@ parent: Networking
 ---
 
 # Data Types
-Thanks to [wiki.vg](https://wiki.vg/index.php?title=Protocol&oldid=510) for the data types.
 
-| Type | Size | Range | Comment |
+| Type | Size (Bytes) | Range | Comment |
 | --- | --- | --- | --- |
 | Boolean | 1 | 0 to 1 | Written as a byte. Can either be `0x00` or `0x01`. |
 | Byte | 1 | -128 to 127 | Signed, two's complement. |
@@ -20,3 +19,5 @@ Thanks to [wiki.vg](https://wiki.vg/index.php?title=Protocol&oldid=510) for the 
 | String8 | >=2 | | Modified UTF-8 string. Prefixed by an unsigned short containing the length of the string. |
 | String16 | >=2 and <= 240 | | UCS-2 string, big-endian. Prefixed by an unsigned short containing the length of the string in characters. UCS-2 consists of 16-bit words, each of which represent a Unicode code point between U+0000 and U+FFFF inclusive. |
 | Entity Metadata | TODO | TODO | TODO |
+
+Thanks to [wiki.vg](https://wiki.vg/index.php?title=Protocol&oldid=510) for the data types.
