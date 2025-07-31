@@ -22,6 +22,9 @@ gh_edit_view_mode: "edit"
 
 enable_copy_code_button: true
 
+back_to_top: true
+back_to_top_text: "Back to top"
+
 callouts:
   # Use for warnings or erroneous info
   warning:
