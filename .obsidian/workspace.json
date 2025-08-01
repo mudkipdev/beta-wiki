@@ -163,6 +163,13 @@
   },
   "active": "fdad498636014cf0",
   "lastOpenFiles": [
+    "_site/general/items.md",
+    "general/items.md",
+    "general/blocks.md",
+    "_site/general/index.md",
+    "_site/general",
+    "general/index.md",
+    "general",
     "_site/rendering/textures.html",
     "rendering/textures.md",
     "_site/networking/packets/012-player-look.html",
@@ -173,10 +180,7 @@
     "_site/blender/facelighting.blend",
     "_site/blender",
     "blender/smoothlighting.blend",
-    "blender/facelighting.blend",
-    "blender",
     "rendering/smoothlighting.png",
-    "rendering/smoothlighting.blend",
     "_site/networking/behavior/index.md",
     "networking/behavior/index.md",
     "networking/behavior/login.md",
@@ -197,10 +201,6 @@
     "networking/packets/255-disconnect.md",
     "networking/packets/200-statistic.md",
     "networking/packets/131-item-data.md",
-    "networking/packets/106-inventory-transaction.md",
-    "networking/packets/130-sign.md",
-    "networking/packets/105-furnace.md",
-    "networking/packets/104-window-items.md",
-    "networking/packets/103-set-inventory-slot.md"
+    "networking/packets/106-inventory-transaction.md"
   ]
 }
