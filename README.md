@@ -5,7 +5,17 @@ Please go to the [GitHub Pages link](https://OfficialPixelBrush.github.io/beta-w
 
 If you'd like to contribute, check the [Contributing page](https://OfficialPixelBrush.github.io/beta-wiki/CONTRIBUTING)
 
-## Maintainers
+## Contributors
 <a href="https://github.com/OfficialPixelBrush/beta-wiki/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=OfficialPixelBrush/beta-wiki" />
+</a>
+
+## Star History
+
+<a href="https://www.star-history.com/#OfficialPixelBrush/beta-wiki&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=OfficialPixelBrush/beta-wiki&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=OfficialPixelBrush/beta-wiki&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=OfficialPixelBrush/beta-wiki&type=Date" />
+ </picture>
 </a>

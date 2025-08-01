@@ -28,3 +28,13 @@ Check the [wiki.vg archive for more Servers](https://minecraft.wiki/w/Minecraft_
 | [Betrock](https://github.com/OfficialPixelBrush/Betrock) | C++ | [Pixel Brush](https://pixelbrush.dev/) |
 
 Check the [wiki.vg archive for more Clients](https://minecraft.wiki/w/Tutorial:Programs_and_editors/Client_reimplementations)
+
+## NBT
+
+| Name | Language | Creator |
+| :--- | :--- | :--- |
+| [nbt](https://github.com/BitBuf/nbt) | Java | [BitBuf](https://github.com/BitBuf) |
+| [cpp-nbt](https://github.com/SpockBotMC/cpp-nbt) | C++ | [SpockBotMC](https://github.com/SpockBotMC)
+| [pixnbt](https://github.com/OfficialPixelBrush/pixnbt) | C++ | [Pixel Brush](https://github.com/OfficialPixelBrush) |
+
+Check the [wiki.vg archive for more Libraries](https://minecraft.wiki/w/Minecraft_Wiki:Projects/wiki.vg_merge/Library_List)

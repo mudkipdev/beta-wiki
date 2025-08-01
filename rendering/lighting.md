@@ -1,16 +1,36 @@
 ---
 title: Lighting
+nav_order: 2
 layout: home
 parent: Rendering
 ---
 
 # Lighting
 {: .no_toc }
-Every block has constant directional lighting, which is statically assigned based on
-the angles of the faces. This is applied on top of any lighting calculated here after the fact.
+This section will go into how lighting data is rendered, not how it is calculated.
 
 1. TOC
 {:toc}
+
+## Face lighting
+Every block has constant directional lighting which is statically assigned based on
+the angles of the faces. This is the base of all lighting therafter, no matter whether its smooth or not.
+
+{: .note }
+> I haven't found a generalized formula to this yet but I'm sure there is one
+
+```c
+if (normal.y > 0.0f) {
+    lighting = 1.0f;
+} else if (normal.y < 0.0f) {
+    lighting = 0.5f;
+} else {
+    lighting = (abs(normal.x) * 0.6) + (abs(normal.z) * 0.8);
+}
+```
+*Source: [Betrock](https://github.com/OfficialPixelBrush/Betrock/blob/5c8e83318117e89ff50f74a2b78da0e802433d8d/src/external/shaders/minecraft.fsh)*
+
+The resulting value is then multiplied with the underlying color.
 
 ## Light levels
 Lighting in Minecraft is based on a 4-Bit gradient from `0` - `15`. As of Indev, this relationship is no longer linear.
@@ -27,7 +47,7 @@ Or in code from
 const float lightArray[16] = { 0.035f, 0.044f, 0.055f, 0.069f, 0.086f, 0.107f, 0.134f, 0.168f, 0.21f, 0.262f, 0.328f, 0.41f, 0.512f, 0.64f, 0.8f, 1.0f };
 ```
 
-## Per-block lighting
+## Non-smooth lighting
 The illumination of a face is determined by the light level of the block its facing, i.e. the top of a grass block with a torch on it would get the full light level of `14`.
 
 ![](facelighting.png)
@@ -37,5 +57,6 @@ Every vertex samples and averages the light level of surrounding blocks along th
 
 ![](smoothlighting.png)
 
-**Credits**
+### Credits
+{: .no_toc }
 - [Vector image of incandescent light bulb pictogram (Public Domain)](https://publicdomainvectors.org/en/free-clipart/Vector-image-of-incandescent-light-bulb-pictogram/23310.html)

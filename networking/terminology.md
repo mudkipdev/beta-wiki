@@ -8,6 +8,9 @@ parent: Networking
 # Terminology
 This page will explain terminology used throughout this entire section of the wiki, mainly to make describing certain concepts as easy and unambiguous as possible.
 
+{: .note }
+> A lot of this terminology is of my own creation, especially all the 'spaces'. You likely won't see them used anywhere else.
+
 | Term | Meaning |
 | :--- | :--- |
 | (`S->C`) Clientbound | Sent from the Server to the Client |

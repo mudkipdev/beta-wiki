@@ -163,6 +163,8 @@
   },
   "active": "fdad498636014cf0",
   "lastOpenFiles": [
+    "_site/rendering/textures.html",
+    "rendering/textures.md",
     "_site/networking/packets/012-player-look.html",
     "_site/rendering/smoothlighting.png",
     "blender/smoothlighting.blend1",
@@ -175,7 +177,6 @@
     "blender",
     "rendering/smoothlighting.png",
     "rendering/smoothlighting.blend",
-    "_site/networking/behavior/index.html",
     "_site/networking/behavior/index.md",
     "networking/behavior/index.md",
     "networking/behavior/login.md",
@@ -200,7 +201,6 @@
     "networking/packets/130-sign.md",
     "networking/packets/105-furnace.md",
     "networking/packets/104-window-items.md",
-    "networking/packets/103-set-inventory-slot.md",
-    "networking/packets/102-click-inventory-slot.md"
+    "networking/packets/103-set-inventory-slot.md"
   ]
 }
