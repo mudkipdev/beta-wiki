@@ -1,11 +1,11 @@
 ---
-title: "0x0E: Mining"
+title: "0x0E: Mine"
 nav_order: 15
 layout: home
 parent: Packets
 ---
 
-# Mining
+# Mine
 
 | Packet ID | Direction |
 | --------- | --------- |
