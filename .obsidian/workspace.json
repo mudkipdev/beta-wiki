@@ -11,10 +11,14 @@
             "id": "fdad498636014cf0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "index"
             }
           }
         ]
@@ -163,9 +167,14 @@
   },
   "active": "fdad498636014cf0",
   "lastOpenFiles": [
+    "general/blocks.md",
+    "_site/general/items.html",
+    "_site/general/index.html",
+    "_site/general/blocks.html",
+    "_site/networking/packets/016-held-item.html",
+    "_site/networking/packets/015-place.html",
     "_site/general/items.md",
     "general/items.md",
-    "general/blocks.md",
     "_site/general/index.md",
     "_site/general",
     "general/index.md",
@@ -175,11 +184,6 @@
     "_site/networking/packets/012-player-look.html",
     "_site/rendering/smoothlighting.png",
     "blender/smoothlighting.blend1",
-    "blender/smoothlighting.blend@",
-    "_site/blender/smoothlighting.blend",
-    "_site/blender/facelighting.blend",
-    "_site/blender",
-    "blender/smoothlighting.blend",
     "rendering/smoothlighting.png",
     "_site/networking/behavior/index.md",
     "networking/behavior/index.md",
@@ -200,7 +204,6 @@
     "index.md",
     "networking/packets/255-disconnect.md",
     "networking/packets/200-statistic.md",
-    "networking/packets/131-item-data.md",
-    "networking/packets/106-inventory-transaction.md"
+    "networking/packets/131-item-data.md"
   ]
 }
