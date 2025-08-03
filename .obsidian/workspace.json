@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "general/mobs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "mobs"
             }
           }
         ]
@@ -167,23 +167,27 @@
   },
   "active": "fdad498636014cf0",
   "lastOpenFiles": [
-    "general/blocks.md",
+    "general/items.md",
+    "_site/general/mobs.html",
+    "_site/general/mobs.md",
+    "general/mobs.md",
+    "networking/data-types.md",
+    "_site/rendering/textures.html",
+    "_site/worlds/nbt.html",
     "_site/general/items.html",
     "_site/general/index.html",
     "_site/general/blocks.html",
+    "_site/general",
     "_site/networking/packets/016-held-item.html",
     "_site/networking/packets/015-place.html",
+    "index.md",
+    "general/blocks.md",
     "_site/general/items.md",
-    "general/items.md",
     "_site/general/index.md",
-    "_site/general",
     "general/index.md",
     "general",
-    "_site/rendering/textures.html",
     "rendering/textures.md",
-    "_site/networking/packets/012-player-look.html",
     "_site/rendering/smoothlighting.png",
-    "blender/smoothlighting.blend1",
     "rendering/smoothlighting.png",
     "_site/networking/behavior/index.md",
     "networking/behavior/index.md",
@@ -200,10 +204,6 @@
     "resources.md",
     "projects.md",
     "networking/packets/index.md",
-    "networking/index.md",
-    "index.md",
-    "networking/packets/255-disconnect.md",
-    "networking/packets/200-statistic.md",
-    "networking/packets/131-item-data.md"
+    "networking/index.md"
   ]
 }

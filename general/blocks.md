@@ -6,6 +6,7 @@ parent: General
 ---
 
 # Blocks
+A comprehensive listing of all blocks
 
 | Value | Name                    | In-game Name | Metadata use                   |
 | :---- | :---------------------- | :----------- | :----------------------------- |
@@ -34,15 +35,15 @@ parent: General
 | 23    | Dispenser               |              |                                |
 | 24    | Sandstone               |              |                                |
 | 25    | Noteblock               |              |                                |
-| 26    | Bed                     |              |                                |
-| 27    | Powered Rail            |              |                                |
-| 28    | Detector Rail           |              |                                |
-| 29    | Sticky Piston           |              |                                |
+| 26    | Bed                     |              | Top/Bottom and Direction       |
+| 27    | Powered Rail            |              | Direction                      |
+| 28    | Detector Rail           |              | Direction                      |
+| 29    | Sticky Piston           |              | Direction                      |
 | 30    | Cobweb                  |              |                                |
 | 31    | Tallgrass               |              | Shrub `0`, Grass `1`, Fern `2` |
 | 32    | Deadbush                |              |                                |
-| 33    | Piston                  |              |                                |
-| 34    | Piston Head             |              |                                |
+| 33    | Piston                  |              | Direction                      |
+| 34    | Piston Head             |              | Direction                      |
 | 35    | Wool                    |              | Color                          |
 | 36    | -                       |              |                                |
 | 37    | Dandelion               |              |                                |
@@ -68,24 +69,24 @@ parent: General
 | 57    | Diamond Block           |              |                                |
 | 58    | Crafting Table          |              |                                |
 | 59    | Wheat                   |              | Growth Stage                   |
-| 60    | Farmland                |              |                                |
+| 60    | Farmland                |              | If its wet                     |
 | 61    | Furnace                 |              |                                |
 | 62    | Furnace (Lit)           |              |                                |
 | 63    | Sign (Ground)           |              | Direction                      |
 | 64    | Wooden Door             |              |                                |
 | 65    | Ladder                  |              | Direction                      |
-| 66    | Rail                    |              |                                |
-| 67    | Cobblestone Stairs      |              |                                |
-| 68    | Sign (Wall)             |              |                                |
-| 69    | Lever                   |              |                                |
-| 70    | Stone Pressure Plate    |              |                                |
+| 66    | Rail                    |              | Direction                      |
+| 67    | Cobblestone Stairs      |              | Direction                      |
+| 68    | Sign (Wall)             |              | Direction                      |
+| 69    | Lever                   |              | Toggled & Direction            |
+| 70    | Stone Pressure Plate    |              | Toggled                        |
 | 71    | Iron Door               |              |                                |
-| 72    | Wooden Pressure Plate   |              |                                |
+| 72    | Wooden Pressure Plate   |              | Toggled                        |
 | 73    | Redstone Ore (Off)      |              |                                |
 | 74    | Redstone Ore (On)       |              |                                |
 | 75    | Redstone Torch (Off)    |              |                                |
 | 76    | Redstone Torch (On)     |              |                                |
-| 77    | Stone Button            |              |                                |
+| 77    | Stone Button            |              | Toggled                        |
 | 78    | Snow Layer              |              |                                |
 | 79    | Ice                     |              |                                |
 | 80    | Snow Block              |              |                                |
@@ -94,14 +95,14 @@ parent: General
 | 83    | Sugarcane               |              |                                |
 | 84    | Jukebox                 |              |                                |
 | 85    | Fence                   |              |                                |
-| 86    | Pumpkin                 |              |                                |
+| 86    | Pumpkin                 |              | Direction                      |
 | 87    | Netherrack              |              |                                |
 | 88    | Soulsand                |              |                                |
 | 89    | Glowstone               |              |                                |
-| 90    | Nether Portal           |              |                                |
-| 91    | Pumpkin (Lit)           |              |                                |
+| 90    | Nether Portal           |              | Direction                      |
+| 91    | Pumpkin (Lit)           |              | Direction                      |
 | 92    | Cake                    |              |                                |
 | 93    | Redstone Repeater (Off) |              |                                |
 | 94    | Redstone Repeater (On)  |              |                                |
 | 95    | Locked Chest            |              |                                |
-| 96    | Trapdoor                |              |                                |
+| 96    | Trapdoor                |              | Toggled & Direction            |
