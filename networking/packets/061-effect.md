@@ -8,7 +8,7 @@ This is sent by the server when it expects a client to play a sound effect or sp
 ## Clientbound
 | Field | Type | Description |
 | --- | --- | --- |
-| Effect ID | Integer | The ID of the effect to play. See [Effects](networking/effects.md) |
+| Effect ID | Integer | The ID of the effect to play. See [Effects](../effects.md) |
 | X | Integer | The X position of where the effect is played.
 | Y | Byte | The Y position of where the effect is played.
 | Z | Integer | The Z position of where the effect is played.
@@ -17,7 +17,7 @@ This is sent by the server when it expects a client to play a sound effect or sp
 <details>
     <summary>Example Packet</summary>
 
-| Field | Value | 
+| Field | Value |
 | --- | --- |
 | Effect ID | 1005 |
 | X | 105 |
