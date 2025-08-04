@@ -9,7 +9,7 @@ parent: General
 A comprehensive list of all mobs.
 
 | Value | Name          |
-| ----- | ------------- |
+| :---- | :------------ |
 | 50    | Creeper       |
 | 51    | Skeleton      |
 | 52    | Spider        |

@@ -32,17 +32,17 @@ callouts:
     color: red
   # Use for notes or notices
   note:
-    title: note
+    title: Note
     color: yellow
   # Use for missing info
   missing:
-    title: missing
+    title: Missing
     color: blue
   # Use for newly uncovered info
   new:
-    title: missing
+    title: New
     color: green
   # Use for unconfirmed info
   theory:
-    title: theory
+    title: Theory
     color: purple

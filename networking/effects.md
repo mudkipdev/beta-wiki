@@ -8,19 +8,18 @@ parent: Networking
 # Effects
 These are the sound/particle effects present in the vanilla client.
 
-| ID   | Name              | Type     |
-| ---- | ----------------- | -------- |
-| 1000 | CLICK             | Sound    |
-| 1001 | CLICK2            | Sound    |
-| 1002 | BOW               | Sound    |
-| 1003 | DOOR              | Sound    |
-| 1004 | FIRE_EXTINGUISHED | Sound    |
-| 1005 | MUSIC_DISC        | Sound    |
-| 2000 | SMOKE             | Particle |
-| 2001 | BLOCK_BREAK       | Sound    |
-
-## Additional Data
 Some of these effects also have additional metadata available as an integer in the [Effect packet](packets/061-effect).
-- `MUSIC_DISC` - `0` to stop playing music, `2256` for 13 and `2257` for "Cat".
-- `SMOKE` - TODO: This supposedly denotes the direction of the smoke.
-- `BLOCK_BREAK`: The block id of the block that's been broken. Sets the sound for whats appropriate and spawns particles with the relevant texture
+
+| Value | Purpose           | Metadata use              | Type             |
+| :---- | :---------------- | :------------------------ | :--------------- |
+| 1000  | Button Click      |                           | Sound            |
+| 1001  | Button Click 2    |                           | Sound            |
+| 1002  | Bow shot          |                           | Sound            |
+| 1003  | Door open/close   |                           | Sound            |
+| 1004  | Fire Extinguisted |                           | Sound            |
+| 1005  | Music Disk        | 13 `2256`, cat `2257`   | Sound            |
+| 2000  | Smoke             | Direction[\*]              | Particle         |
+| 2001  | Block Break       | Block ID                  | Particle + Sound |
+
+{: .missing }
+> [\*]Smoke direction still needs to be figured out

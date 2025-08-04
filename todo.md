@@ -11,8 +11,8 @@ A rough checklist for everything that still needs to be done. Lots to do!
 > Just because something is marked as complete does **not** necessarily mean its perfected or done, it just means its past an arbitrary threshold where I'd consider it passably useful.
 
 - General
-    - [ ] Blocks
-    - [ ] Items
+    - [x] Blocks
+    - [x] Items
 - Networking
     - Packets
         - [ ] All the remaining ones
@@ -21,7 +21,7 @@ A rough checklist for everything that still needs to be done. Lots to do!
     - [ ] Meshing
     - [x] Lighting
 - Worlds
-    - [ ] Parsing of NBT Data
+    - [x] Parsing of NBT Data
     - [ ] level.dat
     - [ ] Player files
     - [ ] McRegion Structure

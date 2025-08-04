@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "general/mobs.md",
+                "file": "general/blocks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mobs"
+              "title": "blocks"
             }
           }
         ]
@@ -167,11 +167,18 @@
   },
   "active": "fdad498636014cf0",
   "lastOpenFiles": [
+    "general/sounds.md",
+    "general/index.md",
+    "general/blocks.md",
+    "networking/data-types.md",
+    "projects.md",
+    "CONTRIBUTING.md",
+    "index.md",
+    "networking/effects.md",
+    "general/mobs.md",
     "general/items.md",
     "_site/general/mobs.html",
     "_site/general/mobs.md",
-    "general/mobs.md",
-    "networking/data-types.md",
     "_site/rendering/textures.html",
     "_site/worlds/nbt.html",
     "_site/general/items.html",
@@ -180,11 +187,8 @@
     "_site/general",
     "_site/networking/packets/016-held-item.html",
     "_site/networking/packets/015-place.html",
-    "index.md",
-    "general/blocks.md",
     "_site/general/items.md",
     "_site/general/index.md",
-    "general/index.md",
     "general",
     "rendering/textures.md",
     "_site/rendering/smoothlighting.png",
@@ -201,9 +205,6 @@
     "rendering/lighting.md",
     "rendering/facelighting.png",
     "networking/terminology.md",
-    "resources.md",
-    "projects.md",
-    "networking/packets/index.md",
-    "networking/index.md"
+    "resources.md"
   ]
 }

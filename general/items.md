@@ -9,7 +9,7 @@ parent: General
 A comprehensive listing of all items.
 
 | Value | Name                 | Metadata use |
-| ----- | -------------------- | ------------ |
+| :---- | :------------------- | :----------- |
 | 256   | Iron Shovel          | Damage       |
 | 257   | Iron Pickaxe         | Damage       |
 | 258   | Iron Axe             | Damage       |
