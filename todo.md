@@ -28,6 +28,7 @@ A rough checklist for everything that still needs to be done. Lots to do!
     - [ ] How to best hold onto Region data
     - [ ] How to write a region back to disk
 - Generation
+    - [x] History
     - [ ] Perlin Noise
     - [ ] Terrain Generation
     - [ ] Surface Population
