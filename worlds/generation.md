@@ -19,19 +19,34 @@ However, we can see that the general shape of the terrain remains the same by us
 
 | A1.1.2 | A1.2.3 |
 | --- | --- |
-| ![](a112.png) | ![](a123.png) |
+| ![](a112.webp) | ![](a123.webp) |
+
+This similar pre-1.2.0 generation dates all the way back to Infdev 20100624, before which the world generation looked entirely different.
+
+| IF20100624 | A1.1.2 |
+| --- | --- |
+| ![](infdevPack.webp) | ![](a112.webp) |
 
 Facing the other way reveals some of the more glaring differences between the generators.
 
 | A1.1.2 | A1.2.3 |
 | --- | --- |
-| ![](a112_pack.png) | ![](a123_pack.png) |
+| ![](a112_pack.webp) | ![](a123_pack.webp) |
 
 Between Alpha 1.2.3 and Beta 1.7.3 there only exist minor differences, mainly relating to the feature generation.
 
 | A1.2.3 | B1.7.3 |
 | --- | --- |
-| ![](a123_pack.png) | ![](b173_pack.png) |
+| ![](a123_pack.webp) | ![](b173_pack.webp) |
 
 {: .note }
 > The seed used throughout all of these comparisons is `3257840388504953787`, the seed behind [`pack.png`](https://minecraftathome.com/projects/packpng.html).
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    mediumZoom('img', {
+      margin: 10,
+      background: '#000000CC'
+    });
+  });
+</script>
