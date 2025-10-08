@@ -1,8 +1,8 @@
 ---
 title: Data Types
 layout: home
-nav_order: 2
-parent: Networking
+nav_order: 1
+parent: Technical
 ---
 
 # Data Types
