@@ -52,5 +52,5 @@ Every NBT-formatted file starts with a `TAG_Compound`, and is terminated with a 
 Check the [projects page](../projects#nbt) for libraries that implemnt NBT in the language you're working in.
 
 # Further reading and sources
-- [NBT Format (Minecraft Wiki)]()
+- [NBT Format (Minecraft Wiki)](https://minecraft.wiki/w/NBT_format)
 - [NBT (Notch)](http://web.archive.org/web/20110723210920/http://www.minecraft.net/docs/NBT.txt)
