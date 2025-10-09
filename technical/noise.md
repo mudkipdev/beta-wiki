@@ -16,7 +16,7 @@ This page will explain how the Perlin Noise Generator for old Minecraft Versions
 {:toc}
 
 ## Perlin Noise
-The algorithm used by Minecraft is "Improved Perlin Noise", first published in 2002, which is a slightly tweaked version of the original Perlin Noise Algorithm from 1985, both by Ken Perlin.
+The algorithm used by Minecraft's Terrain is "Improved Perlin Noise", first published in 2002, which is a slightly tweaked version of the original Perlin Noise Algorithm from 1985, both by Ken Perlin.
 
 The official paper can be found [here](https://dl.acm.org/doi/abs/10.1145/566654.566636), however a more accessible option is the [Wikipedia page on Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise).
 
@@ -40,5 +40,8 @@ X, Y and Z values are passed as input. Then appropriately scaled noise is sample
     return total;
 ```
 
+## Simplex Noise
+Minecraft utilizes Simplex Noise for its Biome values (Temperature & Humidity). As with Perlin noise, [more can be found about this algorithm on Wikipedia](https://en.wikipedia.org/wiki/Simplex_noise).
+
 ## Further reading
-From here on out, you can go ahead and read about how the rest of the world generation is done. Check out the page for the [World Generator](../worlds/generation).
+From here on out, one can read about how the rest of the world generation is done. Check out the page for the [World Generator](../worlds/generation).
