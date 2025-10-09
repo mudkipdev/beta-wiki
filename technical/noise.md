@@ -15,12 +15,15 @@ This page will explain how the Perlin Noise Generator for old Minecraft Versions
 1. TOC
 {:toc}
 
-# Perlin Noise
+## Perlin Noise
 The algorithm used by Minecraft is "Improved Perlin Noise", first published in 2002, which is a slightly tweaked version of the original Perlin Noise Algorithm from 1985, both by Ken Perlin.
 
 The official paper can be found [here](https://dl.acm.org/doi/abs/10.1145/566654.566636), however a more accessible option is the [Wikipedia page on Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise).
 
-# Noise Octaves
+{: .note }
+> [The Farlands](https://minecraft.wiki/w/Java_Edition_Far_Lands/Infdev_20100327_to_Beta_1.7.3) occur here due to an inproper conversion from a 64-Bit Double to a 32-Bit Integer, capping it out at the maximum value of an Integer, resulting in the same permutation from the permutation table being chosen repeatedly
+
+## Noise Octaves
 A common practice when using Perlin noise is to use multiple octaves/layers of it to improve fine detail, resulting in a more realistic/natural appearance.
 
 It boils down to halving the size of the noise, while also halving the amount of noise each additional octave adds.
@@ -37,8 +40,5 @@ X, Y and Z values are passed as input. Then appropriately scaled noise is sample
     return total;
 ```
 
-{: .note }
-> [The Farlands](https://minecraft.wiki/w/Java_Edition_Far_Lands/Infdev_20100327_to_Beta_1.7.3) probably happen somewhere here, though they do not appear in my reimplementation of the Infdev 20100327 Generator
-
-# Further reading
+## Further reading
 From here on out, you can go ahead and read about how the rest of the world generation is done. Check out the page for the [World Generator](/worlds/generation).

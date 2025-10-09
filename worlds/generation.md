@@ -45,6 +45,46 @@ Between Alpha 1.2.3 and Beta 1.7.3 there only exist minor differences, mainly re
 | --- | --- |
 | ![](a123_pack.webp) | ![](b173_pack.webp) |
 
+## Noise Octaves
+The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](/technical/random), alongside 8 [Octaved Perlin Noise Generators](/technical/noise), 7 of which are relevant for World generation.
+
+| Generator | Octaves |
+| --- | --- |
+| Noise #0 | 16 |
+| Noise #1 | 16 |
+| Noise #2 | 8 |
+| Noise #3 | 4 |
+| Noise #4 | 4 |
+| Noise #5 | 10 |
+| Noise #6 | 16 |
+| Mob Spawner Noise | 8 |
+
+{: .missing }
+> Figure out proper names for these generators!
+
+## Terrain Generation
+It appears that after putting some values into a double array, these values are used to generate the Terrain in vertical Chunks.
+
+The basic loop looks roughly as follows.
+```c
+for(int macroX = 0; macroX < 4; ++macroX) {
+  for(int macroZ = 0; macroZ < 4; ++macroZ) {
+    for(int macroY = 0; macroY < 16; ++macroY) {
+      // Get the values from the array
+      for(int subY = 0; subY < 8; ++subY) {
+        for(int subX = 0; subX < 4; ++subX) {
+          for(int subZ = 0; subZ < 4; ++subZ) {
+            // If the level is < 64, it's water
+            // If noise is >0.0 the block is either stone or air
+          }
+        }
+      }
+    }
+  }
+}
+```
+Some of the values appear to modify themselves for the next loop.
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     mediumZoom('img', {
