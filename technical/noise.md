@@ -10,7 +10,7 @@ parent: Technical
 This page will explain how the Perlin Noise Generator for old Minecraft Versions worked.
 
 {: .warning }
-> Most of the info here is only confirmably true for Inf-20100327. I haven't worked my way up to the Alpha generator yet, after which I can be relatively certain that the noise generator remained the same, [as I pointed out in my intro on the Generator page](/worlds/generation).
+> Most of the info here is only confirmably true for Inf-20100327. I haven't worked my way up to the Alpha generator yet, after which I can be relatively certain that the noise generator remained the same, [as I pointed out in my intro on the Generator page](../worlds/generation).
 
 1. TOC
 {:toc}
@@ -41,4 +41,4 @@ X, Y and Z values are passed as input. Then appropriately scaled noise is sample
 ```
 
 ## Further reading
-From here on out, you can go ahead and read about how the rest of the world generation is done. Check out the page for the [World Generator](/worlds/generation).
+From here on out, you can go ahead and read about how the rest of the world generation is done. Check out the page for the [World Generator](../worlds/generation).
