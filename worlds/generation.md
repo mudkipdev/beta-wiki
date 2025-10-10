@@ -46,6 +46,7 @@ Between Alpha 1.2.3 and Beta 1.7.3 there only exist minor differences, mainly re
 | ![](a123_pack.webp) | ![](b173_pack.webp) |
 
 ## Biomes
+To find out more about what Biomes exist and how they're defined, check out [the Biomes page](biomes).
 
 This utilizes [Simplex Noise](../technical/noise#simplex-noise).
 

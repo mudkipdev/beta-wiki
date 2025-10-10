@@ -6,7 +6,7 @@ baseurl: ""
 url: https://OfficialPixelBrush.github.io/beta-wiki
 # favicon_ico: "/assets/images/favicon.ico"
 
-color_scheme: dark
+color_scheme: custom
 color_scheme_toggle: true
 sass:
   style: compressed

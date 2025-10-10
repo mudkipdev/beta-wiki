@@ -21,10 +21,10 @@ The algorithm used by most of Minecraft's Terrain is "Improved Perlin Noise", fi
 The official paper can be found [here](https://dl.acm.org/doi/abs/10.1145/566654.566636), however a more accessible option is the [Wikipedia page on Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise).
 
 {: .note }
-> [The Farlands](https://minecraft.wiki/w/Java_Edition_Far_Lands/Infdev_20100327_to_Beta_1.7.3) occur here due to an inproper conversion from a 64-Bit Double to a 32-Bit Integer, capping it out at the maximum value of an Integer, resulting in the same permutation from the permutation table being chosen repeatedly
+> [The Farlands](https://minecraft.wiki/w/Java_Edition_Far_Lands/Infdev_20100327_to_Beta_1.7.3) occur here a 64-Bit Floating-point number being wrongfully limited to a 32-Bit Integer, capping it out at the maximum value of a 32-Bit Integer, resulting in the same permutation from the permutation table being chosen repeatedly.
 
 ## Simplex Noise
-Minecraft utilizes Simplex Noise for its [Biome values (Temperature & Humidity)](../worlds/generation#biomes). As with Perlin noise, [more can be found about this algorithm on Wikipedia](https://en.wikipedia.org/wiki/Simplex_noise). It was also developed by Ken Perlin.
+Minecraft utilizes Simplex Noise for its [Biome values (Temperature & Humidity)](../worlds/biomes). As with Perlin noise, [more can be found about this algorithm on Wikipedia](https://en.wikipedia.org/wiki/Simplex_noise). It was also developed by Ken Perlin.
 
 ## Noise Octaves
 A common practice when using Perlin noise is to use multiple octaves/layers of it to improve fine detail, resulting in a more realistic/natural appearance.
