@@ -58,13 +58,13 @@ The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](..
 
 | Generator | Octaves |
 | --- | --- |
-| Noise #0 | 16 |
-| Noise #1 | 16 |
-| Noise #2 | 8 |
+| Low Noise | 16 |
+| High Noise | 16 |
+| Noise #1 | 8 |
 | Sand & Gravel Noise | 4 |
 | Stone Noise | 4 |
-| Noise #3 | 10 |
-| Noise #4 | 16 |
+| Noise #2 | 10 |
+| Noise #3 | 16 |
 | Mob Spawner Noise | 8 |
 
 {: .missing }
