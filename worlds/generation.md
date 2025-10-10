@@ -50,14 +50,7 @@ To find out more about what Biomes exist and how they're defined, check out [the
 
 This utilizes [Simplex Noise](../technical/noise#simplex-noise).
 
-{: .missing }
-> It seems that biomes are generated first to determine how terrain should be shaped, so having this step here would be useful.
-
-### Temperature
-TODO
-
-### Humidity
-TODO
+With this a `16x16` Biome Array is generated, where any cell can contain any of the 13 Biomes.
 
 ## Terrain Shape
 ### Noise Octaves
@@ -68,24 +61,34 @@ The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](..
 | Noise #0 | 16 |
 | Noise #1 | 16 |
 | Noise #2 | 8 |
-| Noise #3 | 4 |
-| Noise #4 | 4 |
-| Noise #5 | 10 |
-| Noise #6 | 16 |
+| Sand & Gravel Noise | 4 |
+| Stone Noise | 4 |
+| Noise #3 | 10 |
+| Noise #4 | 16 |
 | Mob Spawner Noise | 8 |
 
 {: .missing }
 > Figure out proper names for these generators!
 
 ### Algorithm
-It appears that after putting some values into a double array, these values are used to generate the Terrain in vertical Chunks.
+The function that's called to generate Chunks is itself quite basic,
+and pretty much just uses the output of a function that's called shortly before a set of
+nested for-loops.
 
+#### Terrain Noise
+This function utilizes 5 of our Perlin Noise Generators, 2 in 2D and 3 in 3D.
+The result of this is placed into another Array, which is a `16x16x16` Double Array that describes our terrain.
+
+#### Interpolation
 The basic loop looks roughly as follows.
 ```c
+terrainArray = GenerateTerrainArray();
 for(int macroX = 0; macroX < 4; ++macroX) {
   for(int macroZ = 0; macroZ < 4; ++macroZ) {
     for(int macroY = 0; macroY < 16; ++macroY) {
-      // Get the values from the array
+      // Here we get the 8 corners of our 3D terrain array
+
+      // With the following loops we interpolate between those points
       for(int subY = 0; subY < 8; ++subY) {
         for(int subX = 0; subX < 4; ++subX) {
           for(int subZ = 0; subZ < 4; ++subZ) {
@@ -99,6 +102,9 @@ for(int macroX = 0; macroX < 4; ++macroX) {
 }
 ```
 Some of the values appear to modify themselves for the next loop.
+
+## Biome Features
+After the terrain shape has been generated, the chunk is transformed further by the Sand, Gravel and Stone Perlin Noise Generators.
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
