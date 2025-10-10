@@ -45,7 +45,21 @@ Between Alpha 1.2.3 and Beta 1.7.3 there only exist minor differences, mainly re
 | --- | --- |
 | ![](a123_pack.webp) | ![](b173_pack.webp) |
 
-## Noise Octaves
+## Biomes
+
+This utilizes [Simplex Noise](../technical/noise#simplex-noise).
+
+{: .missing }
+> It seems that biomes are generated first to determine how terrain should be shaped, so having this step here would be useful.
+
+### Temperature
+TODO
+
+### Humidity
+TODO
+
+## Terrain Shape
+### Noise Octaves
 The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](../technical/random), alongside 8 [Octaved Perlin Noise Generators](../technical/noise), 7 of which are relevant for World generation.
 
 | Generator | Octaves |
@@ -62,7 +76,7 @@ The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](..
 {: .missing }
 > Figure out proper names for these generators!
 
-## Terrain Generation
+### Algorithm
 It appears that after putting some values into a double array, these values are used to generate the Terrain in vertical Chunks.
 
 The basic loop looks roughly as follows.
