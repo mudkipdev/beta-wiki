@@ -12,7 +12,7 @@ Biomes are regions with differing foliage, terrain etc.
 1. TOC
 {:toc}
 
-## Variants
+## Biome List
 There exist 13 distinct Biomes in Beta 1.7.3. They each have unique properties, mainly if they can show rain particles, if it can snow in them, and what their respective foliage and map colors are.
 
 | Name            | Top Block | Filler Block | Rain | Snow |                                 Foliage Color                                  |                                   Map Color                                    |
@@ -31,7 +31,7 @@ There exist 13 distinct Biomes in Beta 1.7.3. They each have unique properties, 
 | Hell            |   Grass   |     Dirt     |  ❌   |  ❌   | <span class="color-swatch" style="background-color:#4EE031;"></span> `#4EE031` | <span class="color-swatch" style="background-color:#FF0000;"></span> `#FF0000` |
 | Sky             |   Grass   |     Dirt     |  ❌   |  ❌   | <span class="color-swatch" style="background-color:#4EE031;"></span> `#4EE031` | <span class="color-swatch" style="background-color:#8080FF;"></span> `#8080FF` |
 
-## Coloration
+## Lookup table
 This is the function that is used to compute the biome lookup table.
 
 ```c
@@ -79,12 +79,12 @@ If mapped to an image, using the foliage/map colors, we get this.
 
 Temperature is X, Humidity is Y. Range is from `0` to `64` (or `0.0` to `1.0`) on both axes.
 
-## Chunk Biome look-up
+## Biome Noise
 The function which determines what biome is use in a chunk is relatively simple.
 It mainly uses 3 [Octave Simplex Noise Generators](../technical/noise#simplex-noise).
 
 ### Noise Octaves
-The current Chunk Coordinate, scaled to Block-Space (multiplie by `16`), is passed in, alongside how many values the generator should return (`16x16` for one chunk) and a scaling factor.
+The current Chunk Coordinate, scaled to Block-Space (multiplied by `16`), is passed in, alongside how many values the generator should return (`16x16` for one chunk) and a scaling factor.
 
 | Generator | Octaves | Scale |
 | --- | :---: | ---: |
@@ -95,26 +95,28 @@ The current Chunk Coordinate, scaled to Block-Space (multiplie by `16`), is pass
 Each of these return a `16x16` array of 64-Bit floating point numbers, which're that chunks' temperature, humidity and ??? values.
 
 ### Logic
-The final biome values are determine by iterating over the `16x16` array and performing the following actions for each entry. An iterator is incremented after each entry.
+The final biomes for each section are determined by iterating over the `16x16` array and performing the following actions for each entry.
 
 ```c
-double var9 = this->otherBiomeThing[index] * 1.1 + 0.5;
-double var11 = 0.01;
-double var13 = 1.0 - var11;
-double temp = (this->temperature[index] * 0.15 + 0.7) * var13 + var9 * var11;
-var11 = 0.002;
-var13 = 1.0 - var11;
-double humi = (this->humidity[index] * 0.15 + 0.5) * var13 + var9 * var11;
-temp = 1.0 - (1.0 - temp) * (1.0 - temp);
-// Limit values to 0.0 - 1.0
-if(temp < 0.0) temp = 0.0;
-if(humi < 0.0) humi = 0.0;
-if(temp > 1.0) temp = 1.0;
-if(humi > 1.0) humi = 1.0;
+for (int i = 0; i < biomeMapSize; i++) {
+    double var9 = this->otherBiomeThing[i] * 1.1 + 0.5;
+    double var11 = 0.01;
+    double var13 = 1.0 - var11;
+    double temp = (this->temperature[i] * 0.15 + 0.7) * var13 + var9 * var11;
+    var11 = 0.002;
+    var13 = 1.0 - var11;
+    double humi = (this->humidity[i] * 0.15 + 0.5) * var13 + var9 * var11;
+    temp = 1.0 - (1.0 - temp) * (1.0 - temp);
+    // Limit values to 0.0 - 1.0
+    if(temp < 0.0) temp = 0.0;
+    if(humi < 0.0) humi = 0.0;
+    if(temp > 1.0) temp = 1.0;
+    if(humi > 1.0) humi = 1.0;
 
-this->temperature[index] = temp;
-this->humidity[index] = humi;
-biomeMap[index++] = GetBiomeFromLookup(temp, humi);
+    this->temperature[i] = temp;
+    this->humidity[i] = humi;
+    biomeMap[i] = GetBiomeFromLookup(temp, humi);
+}
 ```
 
 {: .missing }

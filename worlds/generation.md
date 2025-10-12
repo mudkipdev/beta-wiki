@@ -6,7 +6,7 @@ parent: Worlds
 ---
 
 {: .missing }
-> A huge chunk of info is still missing, mainly because I haven't yet worked my way to the Beta 1.7.3 Generator, so a lot will be guess-work or only relate to older versions.
+> A huge chunk of info is still missing, mainly relating to tree, cave and ore generation.
 
 # Generation
 {: .no_toc }
@@ -56,19 +56,16 @@ With this a `16x16` Biome Array is generated, where any cell can contain any of 
 ### Noise Octaves
 The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](../technical/random), alongside 8 [Octaved Perlin Noise Generators](../technical/noise), 7 of which are relevant for World generation.
 
-| Generator | Octaves |
-| --- | --- |
-| Low Noise | 16 |
-| High Noise | 16 |
-| Noise #1 | 8 |
-| Sand & Gravel Noise | 4 |
-| Stone Noise | 4 |
-| Noise #2 | 10 |
-| Noise #3 | 16 |
-| Mob Spawner Noise | 8 |
-
-{: .missing }
-> Figure out proper names for these generators!
+| Generator | Octaves | Scale |
+| --- | --- | ---: |
+| Low Noise | `16` | `(684.412, 684.412, 684.412)` |
+| High Noise | `16` | `(684.412, 684.412, 684.412)` |
+| Selector Noise | `8` | `(684.412 / 80.0, 684.412 / 160.0, 684.412 / 80.0)` |
+| ? | `10` | `(1.121, 1.121, 0.5)` |
+| Depth Noise | `16` | `(200.0, 200.0, 0.5)` |
+| Sand & Gravel Noise | `4` | |
+| Stone Noise | `4` | |
+| Mob Spawner Noise | `8` | |
 
 ### Algorithm
 The function that's called to generate Chunks is itself quite basic,
@@ -114,3 +111,6 @@ After the terrain shape has been generated, the chunk is transformed further by 
     });
   });
 </script>
+
+## Further Reading
+- [Java Edition Far Lands/Infdev 20100327 to Beta 1.7.3](https://minecraft.wiki/w/Java_Edition_Far_Lands/Infdev_20100327_to_Beta_1.7.3)

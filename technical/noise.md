@@ -1,16 +1,13 @@
 ---
 title: Noise
-nav_order: 3
+nav_order: 5
 layout: home
 parent: Technical
 ---
 
 # Noise
 {: .no_toc }
-This page will explain how the Perlin Noise Generator for old Minecraft Versions worked.
-
-{: .warning }
-> Most of the info here is only confirmably true for Inf-20100327. I haven't worked my way up to the Alpha generator yet, after which I can be relatively certain that the noise generator remained the same, [as I pointed out in my intro on the Generator page](../worlds/generation).
+This page will explain how the Perlin Noise Generator up to at least Beta 1.7.3 worked.
 
 1. TOC
 {:toc}

@@ -5,4 +5,4 @@ layout: home
 ---
 
 # Worlds
-Describing everything involved in saving and loading a McRegion formatted Minecraft World.
+Describing everything relating to how worlds are generated and stored, including the saving and loading of a McRegion formatted Minecraft World.

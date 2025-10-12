@@ -2,7 +2,7 @@
 title: NBT
 nav_order: 2
 layout: home
-parent: Worlds
+parent: Technical
 ---
 
 # NBT
