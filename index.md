@@ -15,6 +15,8 @@ A wiki documenting Minecraft Beta 1.7.3's networking protocol and other technica
 ## Objective
 To consolidate all knowledge on Minecrafts Legacy Protocols, specifically the way they were by Beta 1.7.3. This includes documenting both client and server behavior and communications, all while explaining it in such a way that anyone can make their own client or server with relative ease.
 
+This includes documenting the [inner workings of the World Generator](./worlds/generation), [the McRegion format](./worlds/), etc.
+
 ## Contributing
 [Anyone can contribute to the Wiki](CONTRIBUTING)! Either through digging through decompiled code or just trial and error. Anything goes to make this the most objective source of truth for Minecraft Beta!
 

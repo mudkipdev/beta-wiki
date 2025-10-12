@@ -13,9 +13,8 @@ A small list of clients or servers that implement the Beta 1.7.3 protocol, which
 | --- | --- | --- |
 | [Minecraft](https://www.minecraft.net/) | Java | Mojang |
 | [mc173](https://github.com/mindstorm38/mc173) | Rust | [mindstorm38](https://github.com/mindstorm38/) |
-| [BetrockServer](https://github.com/OfficialPixelBrush/BetrockServer) | C++ | [Pixel Brush](https://pixelbrush.dev/) |
-| [Voxatile](https://github.com/voxatile/voxatile) | Rust | [markosyiakoumis](https://github.com/markosyiakoumis) |
 | [TrueCraft](https://github.com/ddevault/TrueCraft) | C# | [ddevault](https://github.com/ddevault) |
+| [BetrockServer](https://github.com/OfficialPixelBrush/BetrockServer) | C++ | [Pixel Brush](https://pixelbrush.dev/) |
 
 Check the [wiki.vg archive for more Servers](https://minecraft.wiki/w/Minecraft_Wiki:Projects/wiki.vg_merge/Server_List)
 
