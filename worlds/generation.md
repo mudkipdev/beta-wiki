@@ -50,7 +50,7 @@ To find out more about what Biomes exist and how they're defined, check out [the
 
 This process utilizes 3 octaved [Simplex Noise](../technical/noise#simplex-noise) generators called Temperature, Humidity and Weirdness.
 
-With this a `16x16` Biome Array is generated, where any chunk column can contain any of the 13 Biomes.
+With this a `16x16` Biome Array is generated, where any block column can contain any of the 13 Biomes.
 
 | Temperature | Humidity | Weirdness |
 | :---: | :---: | :---: |
@@ -71,36 +71,29 @@ The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](..
 | Depth Noise | `16` | `(200.0, 200.0, 0.5)` |
 | Mob Spawner Noise | `8` | |
 
-### Algorithm
-The function that's called to generate Chunks is itself quite basic,
-and pretty much just uses the output of a function that's called shortly before a set of
-nested for-loops.
-
-#### Terrain Noise
+### Terrain Noise
 This function utilizes 5 of our Perlin Noise Generators, 2 in 2D and 3 in 3D.
-The result of this is placed into another Array, which is a `16x16x16` Double Array that describes our terrain.
+The result of this is placed into a `4x16x4` Double Array that describes our terrain at a reduced scale.
 
-#### Interpolation
-The basic loop looks roughly as follows.
+### Interpolation
+Minecraft uses [Trillinear interpolation](https://en.wikipedia.org/wiki/Trilinear_interpolation) to interpolate between the generated density values, to scale them up to the final `16x128x16` chunk size.
+
+The actual decision which blocks are solid or not comes down to the following function.
 ```c
-terrainArray = GenerateTerrainArray();
-for(int macroX = 0; macroX < 4; ++macroX) {
-  for(int macroZ = 0; macroZ < 4; ++macroZ) {
-    for(int macroY = 0; macroY < 16; ++macroY) {
-      // Here we get the 8 corners of our 3D terrain array
-
-      // With the following loops we interpolate between those points
-      for(int subY = 0; subY < 8; ++subY) {
-        for(int subX = 0; subX < 4; ++subX) {
-          for(int subZ = 0; subZ < 4; ++subZ) {
-            // If the level is < 64, it's water
-            // If noise is >0.0 the block is either stone or air
-          }
-        }
-      }
-    }
+uint8_t blockType = BLOCK_AIR;
+// If water is too cold, turn it into ice
+double temp = temperature[columnIndex];
+if(y < WATER_LEVEL) {
+  if(temp < 0.5 && y >= WATER_LEVEL - 1) {
+    blockType = BLOCK_ICE;
+  } else {
+    blockType = BLOCK_WATER_STILL;
   }
 }
+// Decide which blocks are solid or not
+if(noiseValue > 0.0) blockType = BLOCK_STONE;
+// Write to chunk
+blocks[blockIndex].type = blockType;
 ```
 Some of the values appear to modify themselves for the next loop.
 
@@ -126,7 +119,7 @@ The chunk is now iterated over in a nested x and z for-loop.
 4. An integer is generated for if stone can be placed here
 5. The biomes appropriate top and filler block is chosen (e.g. Grass and Dirt)
 
-For this the current chunk column is iterated over from top to bottom, from `127` down to `0`.
+For this the current block column is iterated over from top to bottom, from `127` down to `0`.
 
 6. If we're at `0`, place Bedrock, plus some random Bedrock up to `5` blocks away.
 7. Get the current block, if it's air go to next loop, if its stone, continue
