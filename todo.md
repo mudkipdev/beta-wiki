@@ -30,5 +30,8 @@ A rough checklist for everything that still needs to be done. Lots to do!
 - Generation
     - [x] History
     - [x] Perlin Noise
+    - [x] Simplex Noise
+    - [x] Biome Selection
     - [ ] Terrain Generation
+        - [ ] Interpolation
     - [ ] Surface Population

@@ -1,6 +1,6 @@
 ---
 title: Biomes
-nav_order: 10
+nav_order: 5
 layout: home
 parent: Worlds
 ---
@@ -11,6 +11,9 @@ Biomes are regions with differing foliage, terrain etc.
 
 1. TOC
 {:toc}
+
+{: .note }
+> The seed used throughout all of these examples is `3257840388504953787`, the seed behind [`pack.png`](https://minecraftathome.com/projects/packpng.html).
 
 ## Biome List
 There exist 13 distinct Biomes in Beta 1.7.3. They each have unique properties, mainly if they can show rain particles, if it can snow in them, and what their respective foliage and map colors are.
@@ -50,14 +53,14 @@ Biome GetBiome(float temperature, float humidity) {
         return desert;
     }
     if (humidity > 0.5 && temperature < 0.7) {
-        return swamplan;
+        return swampland;
     }
     if (temperature < 0.5) {
         return taiga;
     }
     if (temperature < 0.97) {
         if (humidity < 0.35) {
-            return shrublan;
+            return shrubland;
         }
         return forest;
     }
@@ -75,7 +78,7 @@ If mapped to an image, using the foliage/map colors, we get this.
 
 | Foliage Colors | Map Colors |
 | --- | --- |
-| <img src="biomesFoliage.png" style="image-rendering: pixelated; width: 100%"> | <img src="biomesMap.png" style="image-rendering: pixelated; width: 100%"> |
+| <img src="images/biomesFoliage.png" alt="Foliage Colors" style="image-rendering: pixelated; width: 100%"> | <img src="images/biomesMap.png" alt="Map Colors" style="image-rendering: pixelated; width: 100%"> |
 
 Temperature is X, Humidity is Y. Range is from `0` to `64` (or `0.0` to `1.0`) on both axes.
 
@@ -90,22 +93,28 @@ The current Chunk Coordinate, scaled to Block-Space (multiplied by `16`), is pas
 | --- | :---: | ---: |
 | Temperature | 4 | `(0.025, 0.025, 0.25)` |
 | Humidity | 4 | `(0.05, 0.05, 1/3)` |
-| ? | 2 | `(0.25, 0.25, 0.5882352941176471)` |
+| Weirdness | 2 | `(0.25, 0.25, 0.5882352941176471)` |
 
-Each of these return a `16x16` array of 64-Bit floating point numbers, which're that chunks' temperature, humidity and ??? values.
+Each of these return a `16x16` array of 64-Bit floating point numbers, which're that chunks' temperature, humidity and weirdness values.
+
+| Temperature | Humidity | Weirdness |
+| :---: | :---: | :---: |
+| <img src="images/temperaturePre.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPre.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdnessPre.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+
+Temperature, humidity and weirdness values from `0,0` to `32,32`. These values are in the `0.0 - 1.0` range.
 
 ### Logic
 The final biomes for each section are determined by iterating over the `16x16` array and performing the following actions for each entry.
 
 ```c
-for (int i = 0; i < biomeMapSize; i++) {
-    double var9 = this->otherBiomeThing[i] * 1.1 + 0.5;
-    double var11 = 0.01;
-    double var13 = 1.0 - var11;
-    double temp = (this->temperature[i] * 0.15 + 0.7) * var13 + var9 * var11;
-    var11 = 0.002;
-    var13 = 1.0 - var11;
-    double humi = (this->humidity[i] * 0.15 + 0.5) * var13 + var9 * var11;
+for (int i = 0; i < 16*16; i++) {
+    double weird = weirdness[i] * 1.1 + 0.5;
+    double scale = 0.01;
+    double max = 1.0 - scale;
+    double temp = (temperature[i] * 0.15 + 0.7) * max + weird * scale;
+    scale = 0.002;
+    max = 1.0 - scale;
+    double humi = (humidity[i] * 0.15 + 0.5) * max + weird * scale;
     temp = 1.0 - (1.0 - temp) * (1.0 - temp);
     // Limit values to 0.0 - 1.0
     if(temp < 0.0) temp = 0.0;
@@ -113,16 +122,20 @@ for (int i = 0; i < biomeMapSize; i++) {
     if(temp > 1.0) temp = 1.0;
     if(humi > 1.0) humi = 1.0;
 
-    this->temperature[i] = temp;
-    this->humidity[i] = humi;
+    temperature[i] = temp;
+    humidity[i] = humi;
+    // Get the biome from the lookup
     biomeMap[i] = GetBiomeFromLookup(temp, humi);
 }
 ```
 
-{: .missing }
-> It's still unclear what the third noise generator is for. To be determined!
+| Temperature | Humidity | Weirdness |
+| :---: | :---: | :---: |
+| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdnessPost.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
 
-This is then passed to the Chunk Generator.
+Temperature, humidity and weirdness values from `0,0` to `32,32` after being modified by this function. These values are in the `0.0 - 1.0` range.
+
+This is then passed to the [World Generator](generation).
 
 ## Further reading
 Check out the page for the [World Generator](generation).
