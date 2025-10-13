@@ -80,7 +80,7 @@ If mapped to an image, using the foliage/map colors, we get this.
 | --- | --- |
 | <img src="images/biomesFoliage.png" alt="Foliage Colors" style="image-rendering: pixelated; width: 100%"> | <img src="images/biomesMap.png" alt="Map Colors" style="image-rendering: pixelated; width: 100%"> |
 
-Temperature is X, Humidity is Y. Range is from `0` to `64` (or `0.0` to `1.0`) on both axes.
+<sub>Temperature is X, Humidity is Y. Range is from `0` to `64` (or `0.0` to `1.0`) on both axes.</sub>
 
 ## Biome Noise
 The function which determines what biome is use in a chunk is relatively simple.
@@ -99,9 +99,9 @@ Each of these return a `16x16` array of 64-Bit floating point numbers, which're 
 
 | Temperature | Humidity | Weirdness |
 | :---: | :---: | :---: |
-| <img src="images/temperaturePre.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPre.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdnessPre.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+| <img src="images/temperaturePre.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPre.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
 
-Temperature, humidity and weirdness values from `0,0` to `32,32`. These values are in the `0.0 - 1.0` range.
+Temperature, humidity and weirdness values from chunk `-1,-1` to `1,1`. These values are in the `0.0 - 2.0` range.
 
 ### Logic
 The final biomes for each section are determined by iterating over the `16x16` array and performing the following actions for each entry.
@@ -131,9 +131,9 @@ for (int i = 0; i < 16*16; i++) {
 
 | Temperature | Humidity | Weirdness |
 | :---: | :---: | :---: |
-| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdnessPost.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
 
-Temperature, humidity and weirdness values from `0,0` to `32,32` after being modified by this function. These values are in the `0.0 - 1.0` range.
+<sub>Temperature, humidity and weirdness values from chunks `-1,-1` to `1,1` after being modified by this function. These values are in the `0.0 - 2.0` range. Weirdness is not affected.</sub>
 
 This is then passed to the [World Generator](generation).
 

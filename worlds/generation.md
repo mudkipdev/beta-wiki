@@ -18,6 +18,9 @@ The generation described in this section will explain how Minecraft Beta 1.7.3 d
 {: .note }
 > The seed used throughout all of these comparisons is `3257840388504953787`, the seed behind [`pack.png`](https://minecraftathome.com/projects/packpng.html).
 
+{: .note }
+> In any visualizations, the shown chunks range from `-1,-1` to `1,1`. Additionally, up is always towards **Negative Z**, while right is always towards **Positive X**.
+
 ## History
 The first version to have the Beta-era generator was Alpha 1.2.0, and it was used up until Beta 1.7.3.
 
@@ -54,9 +57,9 @@ With this a `16x16` Biome Array is generated, where any block column can contain
 
 | Temperature | Humidity | Weirdness |
 | :---: | :---: | :---: |
-| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdnessPost.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
 
-Temperature, humidity and weirdness values from `0,0` to `32,32` after being modified by this function. These values are in the `0.0 - 1.0` range.
+<sub>Temperature, humidity and weirdness values after being modified by this function. These values are in the `0.0 - 2.0` range.</sub>
 
 ## Terrain Shape
 ### Noise Octaves
@@ -97,11 +100,12 @@ blocks[blockIndex].type = blockType;
 ```
 Some of the values appear to modify themselves for the next loop.
 
-| Terrain | Terrain with water level |
+| Terrain | Terrain (water) |
 | --- | --- |
 | <img src="images/terrain.png" alt="Terrain map" style="image-rendering: pixelated; width: 100%"> | <img src="images/terrainWater.png" alt="Terrain map with water level" style="image-rendering: pixelated; width: 100%"> |
 
-Highest stone blocks from `0,0` to `32,32`. These values are in the `0 - 127` range (scaled to `0 - 255` in the image).
+<sub>Highest stone blocks. Color values have been tweaked to be more readable.
+Blocks at or below water level are marked in blue.</sub>
 
 ## Biome Blocks
 After the terrain shape has been generated, the chunk is transformed further by the Sand, Gravel and Stone Perlin Noise Generators.
@@ -111,6 +115,12 @@ After the terrain shape has been generated, the chunk is transformed further by 
 | Sand & Gravel Noise (Sand) | `4` | `(1/32, 1/32, 1.0)` |
 | Sand & Gravel Noise (Gravel) | `4` | `(1/32, 1.0, 1/32)` |
 | Stone Noise | `4` | `(1/16, 1/16, 1/16)` |
+
+| Sand | Gravel | Stone |
+| --- | --- | --- |
+| <img src="images/sandNoise.png" alt="Sand noise" style="image-rendering: pixelated; width: 100%"> | <img src="images/gravelNoise.png" alt="Gravel noise" style="image-rendering: pixelated; width: 100%"> | <img src="images/stoneNoise.png" alt="Stone noise" style="image-rendering: pixelated; width: 100%"> |
+
+<sub>Sand, Gravel and Stone noise. Color values have been tweaked to be more readable.</sub>
 
 The chunk is now iterated over in a nested x and z for-loop.
 1. The biome for the specified column is read

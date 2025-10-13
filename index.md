@@ -2,7 +2,7 @@
 title: Beta Wiki
 layout: home
 nav_order: 1
-last_modified_date: 12-10-2025
+last_modified_date: 13-10-2025
 ---
 # Beta Wiki
 A wiki documenting Minecraft Beta 1.7.3's networking protocol and other technical insights.
