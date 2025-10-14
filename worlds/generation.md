@@ -51,15 +51,21 @@ Between Alpha 1.2.3 and Beta 1.7.3 there only exist minor differences, mainly re
 ## Biomes
 To find out more about what Biomes exist and how they're defined, check out [the Biomes page](biomes).
 
-This process utilizes 3 octaved [Simplex Noise](../technical/noise#simplex-noise) generators called Temperature, Humidity and Weirdness.
-
-With this a `16x16` Biome Array is generated, where any block column can contain any of the 13 Biomes.
+This process utilizes 3 octaved [Simplex Noise](../technical/noise#simplex-noise) generators called Temperature, Humidity and Weirdness. This process is described [here](biomes#biome-noise).
 
 | Temperature | Humidity | Weirdness |
 | :---: | :---: | :---: |
 | <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
 
 <sub>Temperature, humidity and weirdness values after being modified by this function. These values are in the `0.0 - 2.0` range.</sub>
+
+With this a `16x16` Biome Array is generated, where any block column can contain any of the 13 Biomes.
+
+| Foliage Colors | Map Colors |
+| :---: | :---: |
+| <img src="images/terrainFoliage.png" alt="Biomes with foliage colors" style="image-rendering: pixelated; width: 100%"> | <img src="images/terrainMap.png" alt="Biomes with map colors" style="image-rendering: pixelated; width: 100%"> |
+
+<sub>Biomes colored as per the [biomes](biomes#biome-list) page.</sub>
 
 ## Terrain Shape
 ### Noise Octaves
@@ -101,7 +107,7 @@ blocks[blockIndex].type = blockType;
 Some of the values appear to modify themselves for the next loop.
 
 | Terrain | Terrain (water) |
-| --- | --- |
+| :---: | :---: |
 | <img src="images/terrain.png" alt="Terrain map" style="image-rendering: pixelated; width: 100%"> | <img src="images/terrainWater.png" alt="Terrain map with water level" style="image-rendering: pixelated; width: 100%"> |
 
 <sub>Highest stone blocks. Color values have been tweaked to be more readable.
@@ -117,7 +123,7 @@ After the terrain shape has been generated, the chunk is transformed further by 
 | Stone Noise | `4` | `(1/16, 1/16, 1/16)` |
 
 | Sand | Gravel | Stone |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | <img src="images/sandNoise.png" alt="Sand noise" style="image-rendering: pixelated; width: 100%"> | <img src="images/gravelNoise.png" alt="Gravel noise" style="image-rendering: pixelated; width: 100%"> | <img src="images/stoneNoise.png" alt="Stone noise" style="image-rendering: pixelated; width: 100%"> |
 
 <sub>Sand, Gravel and Stone noise. Color values have been tweaked to be more readable.</sub>
