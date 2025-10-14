@@ -139,6 +139,19 @@ For this the current block column is iterated over from top to bottom, from `127
 {: .note }
 > I'm unsure if I like this format more than just pasted, commented code.
 
+## Caves
+
+{: .missing }
+> Got it working, still need to figure out the algorithm
+
+## Features
+
+Features are things such as trees, ores and tallgrass.
+
+{: .missing }
+> TODO
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     mediumZoom('img', {
