@@ -35,7 +35,7 @@ There exist 13 distinct Biomes in Beta 1.7.3. They each have unique properties, 
 | Sky             |   Grass   |     Dirt     |  ❌   |  ❌   | <span class="color-swatch" style="background-color:#4EE031;"></span> `#4EE031` | <span class="color-swatch" style="background-color:#8080FF;"></span> `#8080FF` |
 
 ## Lookup table
-This is the function that is used to compute the biome lookup table.
+A `64x64` lookup table is generated to more quickly calculate the appropriate biome to use.
 
 ```c
 Biome GetBiome(float temperature, float humidity) {
@@ -80,7 +80,8 @@ If mapped to an image, using the foliage/map colors, we get this.
 | --- | --- |
 | <img src="images/biomesFoliage.png" alt="Foliage Colors" style="image-rendering: pixelated; width: 100%"> | <img src="images/biomesMap.png" alt="Map Colors" style="image-rendering: pixelated; width: 100%"> |
 
-<sub>Temperature is X, Humidity is Y. Range is from `0` to `64` (or `0.0` to `1.0`) on both axes.</sub>
+<sub>Temperature is X, Humidity is Y. Range is from `0` to `64` (or `0.0` to `1.0`) on both axes. [Notch drew this graph back in 2011.](https://minecraft.wiki/w/File:NotchBiomeGraph.png)
+</sub>
 
 ## Biome Noise
 The function which determines what biome is use in a chunk is relatively simple.
@@ -91,30 +92,30 @@ The current Chunk Coordinate, scaled to Block-Space (multiplied by `16`), is pas
 
 | Generator | Octaves | Scale |
 | --- | :---: | ---: |
-| Temperature | 4 | `(0.025, 0.025, 0.25)` |
-| Humidity | 4 | `(0.05, 0.05, 1/3)` |
-| Weirdness | 2 | `(0.25, 0.25, 0.5882352941176471)` |
+| Temperature | `4` | `(0.025, 0.025, 0.25)` |
+| Humidity | `4` | `(0.05, 0.05, 1/3)` |
+| Variation | `2` | `(0.25, 0.25, 0.5882352941176471)` |
 
-Each of these return a `16x16` array of 64-Bit floating point numbers, which're that chunks' temperature, humidity and weirdness values.
+Each of these return a `16x16` array of 64-Bit floating point numbers, which're that chunks' temperature, humidity and variation values.
 
-| Temperature | Humidity | Weirdness |
+| Temperature | Humidity | Variation |
 | :---: | :---: | :---: |
-| <img src="images/temperaturePre.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPre.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+| <img src="images/temperaturePre.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPre.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/biomeVariation.png" alt="Variation map" style="image-rendering: pixelated; width: 100%"> |
 
-Temperature, humidity and weirdness values from chunk `-1,-1` to `1,1`. These values are in the `0.0 - 2.0` range.
+<sub>Temperature, humidity and variation values from chunk `-1,-1` to `1,1`. These values are in the `0.0 - 2.0` range.</sub>
 
-### Logic
+### Biome map
 The final biomes for each section are determined by iterating over the `16x16` array and performing the following actions for each entry.
 
 ```c
 for (int i = 0; i < 16*16; i++) {
-    double weird = weirdness[i] * 1.1 + 0.5;
+    double vari = variation[i] * 1.1 + 0.5;
     double scale = 0.01;
     double max = 1.0 - scale;
-    double temp = (temperature[i] * 0.15 + 0.7) * max + weird * scale;
+    double temp = (temperature[i] * 0.15 + 0.7) * max + vari * scale;
     scale = 0.002;
     max = 1.0 - scale;
-    double humi = (humidity[i] * 0.15 + 0.5) * max + weird * scale;
+    double humi = (humidity[i] * 0.15 + 0.5) * max + vari * scale;
     temp = 1.0 - (1.0 - temp) * (1.0 - temp);
     // Limit values to 0.0 - 1.0
     if(temp < 0.0) temp = 0.0;
@@ -129,11 +130,19 @@ for (int i = 0; i < 16*16; i++) {
 }
 ```
 
-| Temperature | Humidity | Weirdness |
-| :---: | :---: | :---: |
-| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+The returned biome map can look something like this over a 3x3 chunk area.
 
-<sub>Temperature, humidity and weirdness values from chunks `-1,-1` to `1,1` after being modified by this function. These values are in the `0.0 - 2.0` range. Weirdness is not affected.</sub>
+| Foliage Colors | Map Colors |
+| :---: | :---: |
+| <img src="images/terrainFoliage.png" alt="Biomes with foliage colors" style="image-rendering: pixelated; width: 100%"> | <img src="images/terrainMap.png" alt="Biomes with map colors" style="image-rendering: pixelated; width: 100%"> |
+
+The temperature and humidity values are changed by this function, resulting in a different set of values, to be used in later generation stages.
+
+| Temperature | Humidity | Variation |
+| :---: | :---: | :---: |
+| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/biomeVariation.png" alt="Variation map" style="image-rendering: pixelated; width: 100%"> |
+
+<sub>Temperature, humidity and Variation values from chunks `-1,-1` to `1,1` after being modified by this function. These values are in the `0.0 - 2.0` range. Variation is not affected.</sub>
 
 This is then passed to the [World Generator](generation).
 

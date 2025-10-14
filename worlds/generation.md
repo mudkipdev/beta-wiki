@@ -51,13 +51,13 @@ Between Alpha 1.2.3 and Beta 1.7.3 there only exist minor differences, mainly re
 ## Biomes
 To find out more about what Biomes exist and how they're defined, check out [the Biomes page](biomes).
 
-This process utilizes 3 octaved [Simplex Noise](../technical/noise#simplex-noise) generators called Temperature, Humidity and Weirdness. This process is described [here](biomes#biome-noise).
+This process utilizes 3 octaved [Simplex Noise](../technical/noise#simplex-noise) generators called Temperature, Humidity and Variation. This process is described [here](biomes#biome-noise).
 
-| Temperature | Humidity | Weirdness |
+| Temperature | Humidity | Variation |
 | :---: | :---: | :---: |
-| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/weirdness.png" alt="Weirdness map" style="image-rendering: pixelated; width: 100%"> |
+| <img src="images/temperaturePost.png" alt="Temperature map" style="image-rendering: pixelated; width: 100%"> | <img src="images/humidityPost.png" alt="Humidity map" style="image-rendering: pixelated; width: 100%"> | <img src="images/biomeVariation.png" alt="Variation map" style="image-rendering: pixelated; width: 100%"> |
 
-<sub>Temperature, humidity and weirdness values after being modified by this function. These values are in the `0.0 - 2.0` range.</sub>
+<sub>Temperature, humidity and variation values after being modified by this function. These values are in the `0.0 - 2.0` range.</sub>
 
 With this a `16x16` Biome Array is generated, where any block column can contain any of the 13 Biomes.
 
@@ -76,7 +76,7 @@ The Beta 1.7.3 Terrain Generator has a shared [Pseudorandom Number Generator](..
 | Low Noise | `16` | `(684.412, 684.412, 684.412)` |
 | High Noise | `16` | `(684.412, 684.412, 684.412)` |
 | Selector Noise | `8` | `(684.412 / 80.0, 684.412 / 160.0, 684.412 / 80.0)` |
-| ? | `10` | `(1.121, 1.121, 0.5)` |
+| Continentalness | `10` | `(1.121, 1.121, 0.5)` |
 | Depth Noise | `16` | `(200.0, 200.0, 0.5)` |
 | Mob Spawner Noise | `8` | |
 
