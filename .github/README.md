@@ -1,3 +1,6 @@
+> [!WARNING]
+> This wiki is archived. It's recommended to refer to Pixelbrush's [fork](https://pixelbrush.dev/beta-wiki) instead.
+
 ![](banner.jpg)
 
 # beta-wiki
